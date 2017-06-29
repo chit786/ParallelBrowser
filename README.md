@@ -1,0 +1,1 @@
+https://travis-ci.org/chit786/TestAutoFramework.svg?branch=master
