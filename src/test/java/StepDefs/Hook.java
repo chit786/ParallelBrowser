@@ -20,7 +20,7 @@ public class Hook extends BaseUtil{
     @Before
     public void InitializeTest(){
         System.out.println("in before");
-        System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+       // System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
         base.driver = new FirefoxDriver();
         base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
