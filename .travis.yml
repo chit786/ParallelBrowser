@@ -1,4 +1,6 @@
 language: java
 jdk:
   - oraclejdk8
+addons:
+    firefox: "53.0.3"
 script: mvn verify
