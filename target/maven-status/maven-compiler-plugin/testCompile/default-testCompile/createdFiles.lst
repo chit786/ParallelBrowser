@@ -1,10 +1,15 @@
 runner/TestRunner.class
-pages/UserFormPage.class
+runner/GenerateReport.class
 Base/BaseUtil.class
 StepDefs/LoginStep$User.class
 StepDefs/UserFormStep$User.class
+runner/RunCukesByFeatureAndCompositionTest1.class
 StepDefs/Hook.class
 StepDefs/LoginStep.class
 StepDefs/UserFormStep.class
+Base/BrowserFactory.class
+pages/UserFormPage.class
+runner/TestNGExecutionListener.class
+runner/RunCukesByFeatureAndCompositionTest2.class
 pages/LoginPage.class
 Base/BasePageObject.class

@@ -2,19 +2,17 @@ package StepDefs;
 
 import Base.BaseUtil;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import pages.LoginPage;
 import pages.UserFormPage;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by chitrang on 29/06/17.
  */
-public class UserFormStep extends BaseUtil{
+public class UserFormStep extends BaseUtil {
 
 
     private BaseUtil base;

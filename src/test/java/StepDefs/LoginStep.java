@@ -2,13 +2,13 @@ package StepDefs;
 
 import Base.BaseUtil;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.LoginPage;
+import pages.UserFormPage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +16,17 @@ import java.util.List;
 /**
  * Created by chitrang on 27/06/17.
  */
-public class LoginStep extends BaseUtil{
+public class LoginStep extends BaseUtil {
 
 
     private BaseUtil base;
     private LoginPage loginPage;
+    private UserFormPage userFormpage;
 
     public LoginStep(BaseUtil base){
         this.base = base;
         this.loginPage = new LoginPage(base.driver);
+        this.userFormpage = new UserFormPage(base.driver);
     }
 
 
@@ -58,7 +60,8 @@ public class LoginStep extends BaseUtil{
 
     @Then("^I should see the userform page$")
     public void iShouldSeeTheUserformPage() throws Throwable {
-        Assert.assertTrue("UserForm not displayed",base.driver.findElement(By.id("Initial")).isDisplayed());
+
+        Assert.assertTrue("UserForm not displayed",userFormpage.isUserFormVisible());
     }
 
     @Then("^I should see the userform page wrongly$")

@@ -1,8 +1,13 @@
-/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/pages/UserFormPage.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/runner/RunCukesByFeatureAndCompositionTest1.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/runner/TestRunner.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/runner/GenerateReport.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/Base/BasePageObject.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/pages/UserFormPage.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/Base/BrowserFactory.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/Base/BaseUtil.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/pages/LoginPage.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/StepDefs/Hook.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/runner/TestNGExecutionListener.java
+/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/runner/RunCukesByFeatureAndCompositionTest2.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/StepDefs/LoginStep.java
 /Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/StepDefs/UserFormStep.java
-/Users/chitrang/IdeaProjects/TestAutoFramework/src/test/java/Base/BasePageObject.java

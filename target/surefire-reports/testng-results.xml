@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="14199" started-at="2017-06-29T23:08:52Z" finished-at="2017-06-29T23:09:06Z">
+  <suite name="Custom suite" duration-ms="19230" started-at="2017-07-01T12:01:59Z" finished-at="2017-07-01T12:02:18Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@153f5a29]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="RunCukesByFeatureAndCompositionTest1.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest1@3c756e4d]" name="feature" class="runner.RunCukesByFeatureAndCompositionTest1"/>
+        <method signature="RunCukesByFeatureAndCompositionTest2.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest2@51081592]" name="feature" class="runner.RunCukesByFeatureAndCompositionTest2"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="14199" started-at="2017-06-29T23:08:52Z" finished-at="2017-06-29T23:09:06Z">
-      <class name="runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@153f5a29]" name="setUpClass" is-config="true" duration-ms="484" started-at="2017-06-30T01:08:52Z" finished-at="2017-06-30T01:08:53Z">
+    <test name="chromeTests" duration-ms="10514" started-at="2017-07-01T12:01:59Z" finished-at="2017-07-01T12:02:10Z">
+      <class name="runner.RunCukesByFeatureAndCompositionTest1">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest1@3c756e4d]" name="setUpClass" is-config="true" duration-ms="229" started-at="2017-07-01T14:01:59Z" finished-at="2017-07-01T14:01:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@153f5a29]" name="feature" duration-ms="7745" started-at="2017-06-30T01:08:53Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-06-30T01:09:01Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest1@3c756e4d]" name="feature" duration-ms="5650" started-at="2017-07-01T14:01:59Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-07-01T14:02:05Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.TestRunner@153f5a29]" name="feature" duration-ms="5829" started-at="2017-06-30T01:09:01Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-06-30T01:09:06Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest1@3c756e4d]" name="feature" duration-ms="4539" started-at="2017-07-01T14:02:05Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-07-01T14:02:10Z">
           <params>
             <param index="0">
               <value>
@@ -36,11 +37,45 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@153f5a29]" name="tearDownClass" is-config="true" duration-ms="17" started-at="2017-06-30T01:09:06Z" finished-at="2017-06-30T01:09:06Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest1@3c756e4d]" name="tearDownClass" is-config="true" duration-ms="15" started-at="2017-07-01T14:02:10Z" finished-at="2017-07-01T14:02:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.TestRunner -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+      </class> <!-- runner.RunCukesByFeatureAndCompositionTest1 -->
+    </test> <!-- chromeTests -->
+    <test name="firefoxTests" duration-ms="8697" started-at="2017-07-01T12:02:10Z" finished-at="2017-07-01T12:02:18Z">
+      <class name="runner.RunCukesByFeatureAndCompositionTest2">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest2@51081592]" name="setUpClass" is-config="true" duration-ms="19" started-at="2017-07-01T14:02:10Z" finished-at="2017-07-01T14:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest2@51081592]" name="feature" duration-ms="4253" started-at="2017-07-01T14:02:10Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-07-01T14:02:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginFeature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest2@51081592]" name="feature" duration-ms="4415" started-at="2017-07-01T14:02:14Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-07-01T14:02:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UserFormFeature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesByFeatureAndCompositionTest2@51081592]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2017-07-01T14:02:18Z" finished-at="2017-07-01T14:02:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.RunCukesByFeatureAndCompositionTest2 -->
+    </test> <!-- firefoxTests -->
+  </suite> <!-- Custom suite -->
 </testng-results>

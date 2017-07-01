@@ -1,0 +1,250 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 614380,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.InitializeTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with correct username and password",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 71744,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.TearDownTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001352450,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "LoginStep.iNavigateToTheLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 190006510,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "LoginStep.iEnterTheFollowingForLogin(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "admin",
+                  "adminpassword"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 284473935,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click login button",
+            "match": {
+              "location": "LoginStep.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34837023,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "LoginStep.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "This feature deals with the login functionality of the application",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 202068,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.InitializeTest()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "User Should be able to fill the Userform with correct details",
+        "description": "",
+        "id": "userformfeature;user-should-be-able-to-fill-the-userform-with-correct-details",
+        "after": [
+          {
+            "result": {
+              "duration": 90632,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.TearDownTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 314443328,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am logged in to the application",
+            "match": {
+              "location": "UserFormStep.iAmLoggedInToTheApplication(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "admin",
+                  "adminpassword"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 33681408,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "LoginStep.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 333094266,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I fill following user details in the form",
+            "match": {
+              "location": "UserFormStep.iFillFollowingUserDetailsInTheForm(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "title",
+                  "initial",
+                  "firstName",
+                  "middleName",
+                  "gender",
+                  "languages"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Mr.",
+                  "TT",
+                  "Tester",
+                  "tester",
+                  "Female",
+                  "hindi"
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47320183,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click save button",
+            "match": {
+              "location": "UserFormStep.iClickSaveButton()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@userForm"
+          }
+        ]
+      }
+    ],
+    "name": "UserFormFeature",
+    "description": "This feature deals with the userform functionality of the application",
+    "id": "userformfeature",
+    "keyword": "Feature",
+    "uri": "UserForm.feature"
+  }
+]

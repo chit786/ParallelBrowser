@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by chitrang on 29/06/17.
  */
-public class UserFormPage extends BasePageObject<LoginPage> {
+public class UserFormPage extends BasePageObject<UserFormPage> {
 
 
     public UserFormPage(WebDriver driver) {
@@ -46,6 +46,11 @@ public class UserFormPage extends BasePageObject<LoginPage> {
 
     public void saveUserForm(){
         click(btnSave);
+    }
+
+    public Boolean isUserFormVisible(){
+        waitForVisibilityOf(txtInital,10);
+        return find(txtInital).isDisplayed();
     }
 
 }
