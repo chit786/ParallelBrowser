@@ -18,14 +18,14 @@ public class BrowserFactory {
         WebDriver driver;
         switch(browser){
             case "firefox":
-                //System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+                System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
                 driver = new FirefoxDriver();
 
                 //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
                 break;
             case "chrome":
-                //System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
                 driver = new ChromeDriver();
                 String currentWindowHandle = driver.getWindowHandle();
 
@@ -37,7 +37,7 @@ public class BrowserFactory {
                 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
                 break;
             default:
-                //System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+                System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
                 driver = new FirefoxDriver();
                 break;
 
