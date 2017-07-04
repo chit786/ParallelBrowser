@@ -5,12 +5,11 @@ import Base.BrowserFactory;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.TestNGCucumberRunner;
 import cucumber.api.testng.CucumberFeatureWrapper;
-import org.testng.IHookCallBack;
-import org.testng.IHookable;
-import org.testng.ITestResult;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.*;
-
-import java.io.IOException;
 
 /**
  * Created by Chitrang Natu on 7/1/2016.
@@ -22,10 +21,16 @@ import java.io.IOException;
 public class RunCukesByFeatureAndCompositionTest1  {
     private TestNGCucumberRunner testNGCucumberRunner;
     BaseUtil base ;
+    private Logger log;
+
     @Parameters({"browser"})
     @BeforeClass(alwaysRun = true)
-    public void setUpClass(String browser) throws Exception {
-        base.driver = BrowserFactory.getDriver(browser);
+    public void setUpClass(@Optional String browser, ITestContext ctx) throws Exception {
+        base.setWebDriver(BrowserFactory.getDriver(browser));
+        // logging the logger with test name + browser type + session id
+        log = Logger.getLogger(ctx.getCurrentXmlTest().getName() + " - " + ctx.getCurrentXmlTest().getParameter("browser"));
+        //base.driver = BrowserFactory.getDriver(browser);
+        base.setLogger(log);
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
@@ -41,7 +46,16 @@ public class RunCukesByFeatureAndCompositionTest1  {
 
     @AfterClass(alwaysRun = true)
     public void tearDownClass() throws Exception {
-        base.driver.quit();
+
+        WebDriver driver = base.getDriver();
+        if(driver!=null){
+
+            driver.quit();
+
+        }
+        //base.driver.quit();
         testNGCucumberRunner.finish();
     }
+
+
 }

@@ -2,9 +2,14 @@ package Base;
 
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,19 +19,28 @@ import java.util.concurrent.TimeUnit;
 public class BrowserFactory {
 
     public static WebDriver getDriver(String browser){
-
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         WebDriver driver;
         switch(browser){
             case "firefox":
+
+                desiredCapabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
+                desiredCapabilities.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
+//                desiredCapabilities.setCapability("name", "myTestName");
                 System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
-                driver = new FirefoxDriver();
+                driver = new RemoteWebDriver(desiredCapabilities);
+                //driver = new FirefoxDriver();
 
                 //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
                 break;
             case "chrome":
+                desiredCapabilities.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
+                desiredCapabilities.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
+//                desiredCapabilities.setCapability("name", "myTestName");
                 System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
-                driver = new ChromeDriver();
+                driver = new RemoteWebDriver(desiredCapabilities);
+                //driver = new ChromeDriver();
                 String currentWindowHandle = driver.getWindowHandle();
 
                 ((JavascriptExecutor)driver).executeScript("alert('Test')");
@@ -37,7 +51,7 @@ public class BrowserFactory {
                 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
                 break;
             default:
-                System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+                //System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
                 driver = new FirefoxDriver();
                 break;
 

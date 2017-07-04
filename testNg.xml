@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Custom suite" verbose="1" thread-count="2" parallel="classes" configfailurepolicy="continue">
+<suite name="Custom suite" verbose="1" thread-count="2" parallel="tests" configfailurepolicy="continue">
     <listeners>
         <listener class-name="runner.TestNGExecutionListener"></listener>
     </listeners>
-    <test name="chromeTests" annotations="XL" preserve-order="true">
+    <test name="chromeTests"  preserve-order="false">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="runner.RunCukesByFeatureAndCompositionTest1"/>
         </classes>
     </test>
-    <test name="firefoxTests" annotations="XL" preserve-order="true">
+    <test name="firefoxTests" preserve-order="false">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
             <class name="runner.RunCukesByFeatureAndCompositionTest2"/>

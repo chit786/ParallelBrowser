@@ -6,11 +6,11 @@
         "before": [
           {
             "result": {
-              "duration": 594816,
+              "duration": 361730,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.InitializeTest()"
+              "location": "Hook.InitializeTest(Scenario)"
             }
           }
         ],
@@ -21,11 +21,11 @@
         "after": [
           {
             "result": {
-              "duration": 971140,
+              "duration": 142332,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.TearDownTest()"
+              "location": "Hook.TearDownTest(Scenario)"
             }
           }
         ],
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 927710592,
+              "duration": 1892063666,
               "status": "passed"
             },
             "line": 5,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 135857693,
+              "duration": 2195737559,
               "status": "passed"
             },
             "line": 6,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 124172123,
+              "duration": 395206510,
               "status": "passed"
             },
             "line": 9,
@@ -86,7 +86,7 @@
           },
           {
             "result": {
-              "duration": 710716417,
+              "duration": 1516301998,
               "status": "passed"
             },
             "line": 10,
@@ -118,11 +118,11 @@
         "before": [
           {
             "result": {
-              "duration": 193958,
+              "duration": 410726,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.InitializeTest()"
+              "location": "Hook.InitializeTest(Scenario)"
             }
           }
         ],
@@ -133,11 +133,11 @@
         "after": [
           {
             "result": {
-              "duration": 78022,
+              "duration": 104229,
               "status": "passed"
             },
             "match": {
-              "location": "Hook.TearDownTest()"
+              "location": "Hook.TearDownTest(Scenario)"
             }
           }
         ],
@@ -146,7 +146,7 @@
         "steps": [
           {
             "result": {
-              "duration": 286602424,
+              "duration": 1557772898,
               "status": "passed"
             },
             "line": 6,
@@ -174,7 +174,7 @@
           },
           {
             "result": {
-              "duration": 651516811,
+              "duration": 1459543487,
               "status": "passed"
             },
             "line": 9,
@@ -186,7 +186,7 @@
           },
           {
             "result": {
-              "duration": 212170042,
+              "duration": 1218870520,
               "status": "passed"
             },
             "line": 10,
@@ -222,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 35098482,
+              "duration": 121340391,
               "status": "passed"
             },
             "line": 13,

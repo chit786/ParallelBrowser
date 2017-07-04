@@ -25,8 +25,9 @@ public class LoginStep extends BaseUtil {
 
     public LoginStep(BaseUtil base){
         this.base = base;
-        this.loginPage = new LoginPage(base.driver);
-        this.userFormpage = new UserFormPage(base.driver);
+        this.loginPage = new LoginPage(base.getDriver(),base.getLogger());
+        //this.userFormpage = new UserFormPage(base.driver);
+        this.userFormpage = new UserFormPage(base.getDriver(),base.getLogger());
     }
 
 
@@ -50,7 +51,7 @@ public class LoginStep extends BaseUtil {
 
     @Given("^I navigate to the login page$")
     public void iNavigateToTheLoginPage() throws Throwable {
-        base.driver.navigate().to("http://executeautomation.com/demosite/Login.html");
+        base.getDriver().navigate().to("http://executeautomation.com/demosite/Login.html");
     }
 
     @And("^I click login button$")

@@ -1,6 +1,7 @@
 package pages;
 
 import Base.BasePageObject;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -10,10 +11,13 @@ import org.openqa.selenium.WebDriver;
  */
 public class LoginPage extends BasePageObject<LoginPage> {
 
+    private Logger log;
 
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage(WebDriver driver, Logger log) {
+
+        super(driver,log);
+        this.log = log;
         getUniqueElement(btnLogin);
     }
 
@@ -36,7 +40,7 @@ public class LoginPage extends BasePageObject<LoginPage> {
 
         submit(btnLogin);
 
-        return new UserFormPage(driver);
+        return new UserFormPage(driver,log);
 
     }
 }

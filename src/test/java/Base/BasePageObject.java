@@ -1,5 +1,6 @@
 package Base;
 
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -17,19 +18,24 @@ public class BasePageObject<T> {
     protected WebDriverWait wait;
     private By UniqueElement;
     private Integer genericTimeout = 10;
+    private Logger log;
 
 
-    protected BasePageObject(WebDriver driver){
+    protected BasePageObject(WebDriver driver, Logger log){
 
         this.driver = driver;
+        this.log = log;
         wait = new WebDriverWait(driver,genericTimeout);
     }
 
     protected void getUniqueElement(By uniqueElement){
+
         this.UniqueElement = uniqueElement;
+        log.info("getUniqueElement : " + uniqueElement.toString());
     };
 
     protected void isLoaded() throws Error {
+        log.info("isLoaded : ");
         //Define a list of WebElements that match the unique element locator for the page
         if(this.UniqueElement!=null){
             List<WebElement> uniqueElement = driver.findElements(this.UniqueElement);
@@ -51,37 +57,40 @@ public class BasePageObject<T> {
 
     @SuppressWarnings("unchecked")
     protected T getPage(String url){
+        log.info("getPage : " + url);
         driver.get(url);
         return (T) this;
     }
 
     protected void type(String text,By element){
-
+        log.info("type : " + text + " on " + element.toString());
         find(element).sendKeys(text);
 
     }
 
     protected void click(By element){
-
+        log.info("click : " + " on " + element.toString());
         find(element).click();
 
     }
 
 
     protected void submit(By element){
-
+        log.info("submit : " + " on " + element.toString());
         find(element).submit();
 
     }
 
 
     protected WebElement find(By element) throws NoSuchElementException {
+        log.info("find : " + element.toString());
         //waitForVisibilityOff(element,3);
         return driver.findElement(element);
     }
 
 
     protected void waitForVisibilityOf(By locator,Integer... timeOutInSeconds){
+        log.info("waitForVisibilityOf : " + locator.toString());
         int attempts = 0;
         while(attempts<2){
             try{

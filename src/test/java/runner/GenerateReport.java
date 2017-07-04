@@ -28,17 +28,6 @@ public class GenerateReport {
             configuration.setParallelTesting(parallelTesting);
             configuration.setRunWithJenkins(runWithJenkins);
             configuration.setBuildNumber(buildNumber);
-//
-//            boolean skippedFails = true;
-//            boolean pendingFails = true;
-//            boolean undefinedFails = true;
-//            boolean missingFails = true;
-//            boolean flashCharts = true;
-
-//            boolean highCharts = false;
-
-//            boolean artifactsEnabled = false;
-//            String artifactConfig = "";
 
             ReportBuilder reportBuilder = new ReportBuilder(list,configuration);
 

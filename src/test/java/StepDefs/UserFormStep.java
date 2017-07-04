@@ -21,14 +21,14 @@ public class UserFormStep extends BaseUtil {
 
     public UserFormStep(BaseUtil base){
         this.base = base;
-        this.loginPage = new LoginPage(base.driver);
+        this.loginPage = new LoginPage(base.getDriver(),base.getLogger());
         //this.userFormpage = new UserFormPage(base.driver);
     }
 
 
     @Given("^I am logged in to the application$")
     public void iAmLoggedInToTheApplication(DataTable table) throws Throwable {
-        base.driver.navigate().to("http://executeautomation.com/demosite/Login.html");
+        base.getDriver().navigate().to("http://executeautomation.com/demosite/Login.html");
         //Create an ArrayList
         List<List<String>> data = table.raw();
         //Store all the users
