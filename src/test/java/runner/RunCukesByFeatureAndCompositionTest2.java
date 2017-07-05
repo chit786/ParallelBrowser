@@ -58,6 +58,7 @@ public class RunCukesByFeatureAndCompositionTest2 {
             driver.quit();
         }
        // base.driver.quit();
+        log.info(base.getLogger().getName() + " - Finished");
         testNGCucumberRunner.finish();
     }
 }
