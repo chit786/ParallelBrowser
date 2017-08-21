@@ -10,10 +10,10 @@
             <class name="runner.RunCukesByFeatureAndCompositionTest1"/>
         </classes>
     </test>
-    <test name="firefoxTests" preserve-order="false">
-        <parameter name="browser" value="firefox"></parameter>
-        <classes>
-            <class name="runner.RunCukesByFeatureAndCompositionTest2"/>
-        </classes>
-    </test>
+    <!--<test name="firefoxTests" preserve-order="false">-->
+        <!--<parameter name="browser" value="firefox"></parameter>-->
+        <!--<classes>-->
+            <!--<class name="runner.RunCukesByFeatureAndCompositionTest2"/>-->
+        <!--</classes>-->
+    <!--</test>-->
 </suite>

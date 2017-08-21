@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Optional;
 
 import java.util.List;
 
@@ -14,8 +15,8 @@ import java.util.List;
 public class UserFormPage extends BasePageObject<UserFormPage> {
 
 
-    public UserFormPage(WebDriver driver, Logger log) {
-        super(driver, log);
+    public UserFormPage(WebDriver driver) {
+        super(driver);
         getUniqueElement(txtFirstName);
     }
 

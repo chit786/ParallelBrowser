@@ -13,6 +13,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-testng:2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:common-java5:2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-testng-utils:2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-grouper:2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-api:2.20" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-logger-api:2.20" level="project" />
     <orderEntry type="library" name="Maven: info.cukes:cucumber-java:1.2.5" level="project" />
     <orderEntry type="library" name="Maven: info.cukes:cucumber-core:1.2.5" level="project" />
     <orderEntry type="library" name="Maven: info.cukes:cucumber-html:0.2.3" level="project" />

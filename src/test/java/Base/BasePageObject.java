@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Optional;
 
 import java.util.List;
 
@@ -18,24 +19,24 @@ public class BasePageObject<T> {
     protected WebDriverWait wait;
     private By UniqueElement;
     private Integer genericTimeout = 10;
-    private Logger log;
+    //private Logger log;
 
 
-    protected BasePageObject(WebDriver driver, Logger log){
+    protected BasePageObject(WebDriver driver){
 
         this.driver = driver;
-        this.log = log;
+        //this.log = log;
         wait = new WebDriverWait(driver,genericTimeout);
     }
 
     protected void getUniqueElement(By uniqueElement){
 
         this.UniqueElement = uniqueElement;
-        log.info("getUniqueElement : " + uniqueElement.toString());
+        //log.info("getUniqueElement : " + uniqueElement.toString());
     };
 
     protected void isLoaded() throws Error {
-        log.info("isLoaded : ");
+        //log.info("isLoaded : ");
         //Define a list of WebElements that match the unique element locator for the page
         if(this.UniqueElement!=null){
             List<WebElement> uniqueElement = driver.findElements(this.UniqueElement);
@@ -57,40 +58,40 @@ public class BasePageObject<T> {
 
     @SuppressWarnings("unchecked")
     protected T getPage(String url){
-        log.info("getPage : " + url);
+        //log.info("getPage : " + url);
         driver.get(url);
         return (T) this;
     }
 
     protected void type(String text,By element){
-        log.info("type : " + text + " on " + element.toString());
+        //log.info("type : " + text + " on " + element.toString());
         find(element).sendKeys(text);
 
     }
 
     protected void click(By element){
-        log.info("click : " + " on " + element.toString());
+        //log.info("click : " + " on " + element.toString());
         find(element).click();
 
     }
 
 
     protected void submit(By element){
-        log.info("submit : " + " on " + element.toString());
+        //log.info("submit : " + " on " + element.toString());
         find(element).submit();
 
     }
 
 
     protected WebElement find(By element) throws NoSuchElementException {
-        log.info("find : " + element.toString());
+       // log.info("find : " + element.toString());
         //waitForVisibilityOff(element,3);
         return driver.findElement(element);
     }
 
 
     protected void waitForVisibilityOf(By locator,Integer... timeOutInSeconds){
-        log.info("waitForVisibilityOf : " + locator.toString());
+        //log.info("waitForVisibilityOf : " + locator.toString());
         int attempts = 0;
         while(attempts<2){
             try{

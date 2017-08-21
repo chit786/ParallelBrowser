@@ -14,10 +14,10 @@ public class LoginPage extends BasePageObject<LoginPage> {
     private Logger log;
 
 
-    public LoginPage(WebDriver driver, Logger log) {
+    public LoginPage(WebDriver driver) {
 
-        super(driver,log);
-        this.log = log;
+        super(driver);
+        //this.log = log;
         getUniqueElement(btnLogin);
     }
 
@@ -40,7 +40,7 @@ public class LoginPage extends BasePageObject<LoginPage> {
 
         submit(btnLogin);
 
-        return new UserFormPage(driver,log);
+        return new UserFormPage(driver);
 
     }
 }

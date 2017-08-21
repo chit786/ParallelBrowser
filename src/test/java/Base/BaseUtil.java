@@ -2,6 +2,7 @@ package Base;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 /**
@@ -9,32 +10,33 @@ import org.testng.annotations.*;
  */
 public class BaseUtil {
 
-//    public static WebDriver driver;
-    public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+    public static WebDriver driver;
 
-    public static ThreadLocal<Logger> log = new ThreadLocal<Logger>() ;
-
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
-
-    public static void setWebDriver(WebDriver drivernew) {
-        driver.set(drivernew);
-    }
-
-    public static void setLogger(Logger lognew){
-        log.set(lognew);
-
-    }
-
-    public static Logger getLogger() {
-        return log.get();
-    }
-
-    public static void editLogger(Logger lognew){
-        log.remove();
-        log.set(lognew);
-    }
+//    public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+//
+//    public static ThreadLocal<Logger> log = new ThreadLocal<Logger>() ;
+//
+//    public static WebDriver getDriver() {
+//        return driver.get();
+//    }
+//
+//    public static void setWebDriver(WebDriver drivernew) {
+//        driver.set(drivernew);
+//    }
+//
+//    public static void setLogger(Logger lognew){
+//        log.set(lognew);
+//
+//    }
+//
+//    public static Logger getLogger() {
+//        return log.get();
+//    }
+//
+//    public static void editLogger(Logger lognew){
+//        log.remove();
+//        log.set(lognew);
+//    }
 
 
 }

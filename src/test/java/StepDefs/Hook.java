@@ -12,9 +12,13 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -33,29 +37,32 @@ public class Hook extends BaseUtil {
     }
 
     @Before
-    public void InitializeTest(Scenario scenario){
+    public void InitializeTest(Scenario scenario) throws MalformedURLException{
         System.out.println("in before");
         scName = scenario.getName();
 
-        oldName = base.getLogger().getName();
-        oldNameParams = oldName.split("-");
-        if(oldNameParams.length>2){
-            oldName = oldNameParams[0].toString() + " - " + oldNameParams[1].toString();
-        }
+//        oldName = base.getLogger().getName();
+//        oldNameParams = oldName.split("-");
+//        if(oldNameParams.length>2){
+//            oldName = oldNameParams[0].toString() + " - " + oldNameParams[1].toString();
+//        }
+//
+//        log = Logger.getLogger(oldName + " - " + scName);
+//
+//        base.editLogger(log);
 
-        log = Logger.getLogger(oldName + " - " + scName);
+        System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
+        //base.driver = new FirefoxDriver();
 
-        base.editLogger(log);
-
-//        System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
-//        base.driver = new FirefoxDriver();
-//        base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        base.driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+        base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
     public void TearDownTest(Scenario scenario){
         System.out.println("in after");
-        WebDriver driver = base.getDriver();
+        //WebDriver driver = base.getDriver();
+
         if(scenario.isFailed())
         {
             try {
@@ -67,7 +74,7 @@ public class Hook extends BaseUtil {
                 e.printStackTrace();
             }
         }
-
+        driver.quit();
 
     }
 
