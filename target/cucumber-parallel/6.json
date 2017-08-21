@@ -1,0 +1,138 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 30731473589,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.InitializeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "User Should be able to fill the Userform with correct details try 3",
+        "description": "",
+        "id": "userformfeature;user-should-be-able-to-fill-the-userform-with-correct-details-try-3",
+        "after": [
+          {
+            "result": {
+              "duration": 317684811,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.TearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3347720361,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I am logged in to the application",
+            "match": {
+              "location": "UserFormStep.iAmLoggedInToTheApplication(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "admin",
+                  "adminpassword"
+                ],
+                "line": 31
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1313444011,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "LoginStep.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1267333516,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I fill following user details in the form",
+            "match": {
+              "location": "UserFormStep.iFillFollowingUserDetailsInTheForm(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "title",
+                  "initial",
+                  "firstName",
+                  "middleName",
+                  "gender",
+                  "languages"
+                ],
+                "line": 34
+              },
+              {
+                "cells": [
+                  "Mr.",
+                  "TT",
+                  "Tester",
+                  "tester",
+                  "Female",
+                  "hindi"
+                ],
+                "line": 35
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80607170,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click save button",
+            "match": {
+              "location": "UserFormStep.iClickSaveButton()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 27,
+            "name": "@userForm"
+          }
+        ]
+      }
+    ],
+    "name": "UserFormFeature",
+    "description": "This feature deals with the userform functionality of the application",
+    "id": "userformfeature",
+    "keyword": "Feature",
+    "uri": "/Users/chitrang/IdeaProjects/ParallelBrowser/src/test/resources/features/UserForm.feature"
+  }
+]
